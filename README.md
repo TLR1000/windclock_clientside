@@ -2,10 +2,10 @@
 Sample usage of the windklok api v2.
 Three options given here, although the raw html example should be avoided since it exposes url and credentials.
 
-# Option: raw html
+# Example: raw html
 see file weather_data.html [weather_data.html](https://github.com/TLR1000/windclock_clientside/blob/main/weather_data.html) for sample usage. 
 
-# Option: wordpress
+# Example: using wordpress
 To implement the API call and information display in a WordPress site, you can use a combination of custom code and plugins. 
 
 ### Step 1: create the plugin
@@ -40,7 +40,7 @@ Create a Custom CSS File:
     font-size: 16px;
 }
 ```
-# Option: using a server-side proxy
+# Example: using a server-side proxy
 Create a server-side script in a language like Node.js, Python, PHP, etc., that handles the API request.   
 This script will include the access key and make the request to the Google Apps Script endpoint.   
 - Call the Server-Side Script from the Front-End:
