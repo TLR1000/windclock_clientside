@@ -48,9 +48,9 @@ This script will include the access key and make the request to the Google Apps 
 
 Here’s an example using Node.js with Express:
 
-- Install Express: NPM install express
+- Install Express: `NPM install express`
 - Create server.js: see file [server.js](https://github.com/TLR1000/windclock_clientside/blob/main/server.js)
-- Run the Node.js Server: node server.js
-- Make te call in the html like in [weather_data_via_proxy.html](https://github.com/TLR1000/windclock_clientside/blob/main/weather_data_via_proxy.html)
+- Run the Node.js Server: `node server.js`
+- Make the call in the html like in [weather_data_via_proxy.html](https://github.com/TLR1000/windclock_clientside/blob/main/weather_data_via_proxy.html)
 
 
