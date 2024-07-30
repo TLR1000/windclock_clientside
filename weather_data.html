@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data</title>
+    <style>
+        .data-container {
+            margin-top: 20px;
+        }
+        .data-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Data for Haringvliet</h1>
+    <div id="data-container" class="data-container">Loading data...</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://script.google.com/macros/s/AKfycbyZopWBM949LZjfe1YAgMIArJ4C7rDueubC2-UzCyDCHBTn5PEnIqE822kvE9JPyZw/exec?access_key=jeroen&location=Haringvliet')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('data-container');
+                    container.innerHTML = `
+                        <div class="data-item"><strong>Location:</strong> ${data.loc}</div>
+                        <div class="data-item"><strong>Knots:</strong> ${data.knots}</div>
+                        <div class="data-item"><strong>Gust:</strong> ${data.gust}</div>
+                        <div class="data-item"><strong>Direction:</strong> ${data.direction}</div>
+                        <div class="data-item"><strong>Water Temperature:</strong> ${data.watertemp}</div>
+                        <div class="data-item"><strong>Timestamp:</strong> ${data.timestamp}</div>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('data-container').innerHTML = `<div class="data-item">Error fetching data.</div>`;
+                });
+        });
+    </script>
+</body>
+</html>
